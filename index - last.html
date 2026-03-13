@@ -672,7 +672,7 @@
                 image: "https://raw.githubusercontent.com/yachenamk-hash/images/refs/heads/main/Firefly_Gemini%20Flash_remouve%20logo%20in%20this%20picture%20344274.png",
                 hasOptions: false,
                 fr: {
-                    name: "Éclat de Piment",
+                    name: "Piment",
                     price: "850 DZD / 12 pcs",
                     size: "Ø 8cm",
                     desc: "Une création audacieuse infusée au piment doux et piment d'Espelette. Une attaque subtile en bouche qui réveille les papilles sans les brûler.",
@@ -680,7 +680,7 @@
                     ingredients: ["Piment d'Espelette", "Piment doux séché", "Beurre de baratte", "Farine de force", "Fleur de sel"]
                 },
                 ar: {
-                    name: " الفلفل الحار",
+                    name: "الفلفل الحار",
                     price: "850 دج / 12 قطعة",
                     size: "قطر 8 سم",
                     desc: "ابتكار جريء غني بالفلفل الحار . لدغة خفيفة توقظ الحواس دون حرقة قوية.",
@@ -693,7 +693,7 @@
                 image: "https://raw.githubusercontent.com/yachenamk-hash/images/refs/heads/main/Firefly_Gemini%20Flash_remouve%20logo%20344274.png",
                 hasOptions: false,
                 fr: {
-                    name: "citron",
+                    name: "Citron",
                     price: "750 DZD / 12 pcs",
                     size: "Ø 8cm",
                     desc: "Une pâte infusée aux zestes de citrons frais. Une note acidulée et parfumée qui apporte une fraîcheur immédiate dès la première bouchée.",
@@ -701,12 +701,12 @@
                     ingredients: ["Zestes de citron bio", "Beurre ", "Sucre ", "Extrait naturel de citron", "Farine "]
                 },
                 ar: {
-                    name: "نكهة الليمون ",
+                    name: "الليمون",
                     price: "750 دج / 12 قطعة",
                     size: "قطر 8 سم",
                     desc: "عجينة غنية ببشر الليمون الطازج. نكهة حمضية وعطرية تضفي انتعاشاً فورياً منذ أول قضمة.",
                     note: "تتناسب تماماً مع ترت الليمون بالميرنغ أو حشوات الجبن الطازج والريحان.",
-                    ingredients: [null, "زبدة طبيعية", "سكر ", "مستخلص الليمون", "فرينة "]
+                    ingredients: ["بشر الليمون العضوي", "زبدة طبيعية", "سكر ", "مستخلص الليمون", "فرينة "]
                 }
             },
             {
@@ -878,8 +878,9 @@
                 const tab = document.createElement('div');
                 tab.className = `nav-tab ${idx === currentVariantIndex ? 'active' : ''}`;
                 
-                const shortName = v[currentLang].name.split(' ')[0] || v.id;
-                tab.textContent = shortName.toUpperCase();
+                const nameForTab = v[currentLang].name.trim();
+                const firstWord = nameForTab.split(' ')[0] || v.id;
+                tab.textContent = currentLang === 'fr' ? firstWord.toUpperCase() : firstWord;
                 
                 tab.addEventListener('click', () => {
                     if (currentVariantIndex === idx) return;
