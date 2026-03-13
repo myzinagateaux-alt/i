@@ -34,7 +34,7 @@
 
         body.font-arabic, .rtl {
             font-family: 'Cairo', sans-serif;
-            font-size: 1.05rem; /* Slight bump for readability */
+            font-size: 1.05rem;
             line-height: 1.8;
         }
 
@@ -158,12 +158,10 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        /* Texture Papier Artisanal */
         .texture-paper {
             background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
         }
 
-        /* RTL Adjustments */
         [dir="rtl"] .composition-header {
             border-left: none;
             border-right: 2px solid var(--primary);
@@ -180,7 +178,6 @@
             border-right: none;
         }
 
-        /* Product Card Zoom Effect */
         .product-card {
             transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
         }
@@ -189,7 +186,6 @@
             transform: translateY(-10px);
         }
 
-        /* Selectors Buttons */
         .var-selector-btn {
             border: 1px solid rgba(255,255,255,0.1);
             background: rgba(255,255,255,0.02);
@@ -209,7 +205,6 @@
             transform: translateY(-2px);
         }
 
-        /* Form Styles */
         input, select, textarea {
             border-radius: 0;
             -webkit-appearance: none;
@@ -225,7 +220,6 @@
             background-position: left center;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -236,13 +230,11 @@
             background: var(--primary);
         }
 
-        /* Selection */
         ::selection {
             background: var(--primary);
             color: white;
         }
 
-        /* Accent for RTL Border */
         .border-accent {
             transition: all 0.5s ease;
         }
@@ -379,11 +371,8 @@
                         <p data-t="heritage_p2">Nous sélectionnons les meilleures matières premières pour garantir une texture et un goût incomparables.</p>
                     </div>
                     <div class="mt-12 flex gap-12 border-t border-black/5 pt-12">
-                        <div>
-                            
-                        </div>
-                        <div>
-                                                    </div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -397,9 +386,7 @@
                     <span class="text-[#E5C366] text-[11px] uppercase tracking-[0.4em] font-black block mb-4" data-t="cat_tag">La Collection Signature</span>
                     <h2 class="font-serif text-6xl md:text-[10rem] leading-[0.9]" data-t="cat_title">Variantes</h2>
                 </div>
-                <div class="max-w-md text-white/40 text-sm md:text-lg font-light">
-                    
-                </div>
+                <div class="max-w-md text-white/40 text-sm md:text-lg font-light"></div>
             </div>
 
             <div class="mb-20 -mx-6 md:mx-0">
@@ -519,6 +506,10 @@
                             <label class="text-[10px] uppercase tracking-widest font-black text-white/40 block" data-t="f_email">Email</label>
                             <input type="email" name="email" required class="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#E5C366] transition-all text-white text-xl">
                         </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest font-black text-white/40 block" data-t="f_phone">Numéro de Téléphone</label>
+                            <input type="tel" name="phone" class="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#E5C366] transition-all text-white text-xl" placeholder="+213 ...">
+                        </div>
                         <div class="space-y-2 relative">
                             <label class="text-[10px] uppercase tracking-widest font-black text-white/40 block" data-t="f_subject">Variante d'intérêt</label>
                             <select id="contact-select" name="variation" class="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#E5C366] transition-all text-white/90 text-xl appearance-none cursor-pointer"></select>
@@ -597,6 +588,7 @@
                 contact_subtitle: "Que vous soyez un professionnel ou un passionné, nous vous accompagnons dans la réalisation de vos rêves pâtissiers.",
                 f_name: "Nom & Prénom",
                 f_email: "Email",
+                f_phone: "Numéro de Téléphone",
                 f_subject: "Variante souhaitée",
                 f_message: "Votre Message",
                 f_submit: "Envoyer la demande",
@@ -640,6 +632,7 @@
                 contact_subtitle: "سواء كنت محترفاً أو هاوياً، نحن نرافقك في تحقيق أحلامك في صناعة الحلويات.",
                 f_name: "الاسم واللقب",
                 f_email: "البريد الإلكتروني",
+                f_phone: "رقم الهاتف",
                 f_subject: "النوع المطلوب",
                 f_message: "رسالتك",
                 f_submit: "إرسال الطلب",
@@ -650,7 +643,7 @@
             }
         };
 
-        const variants =[
+        const variants = [
             {
                 id: "classique",
                 image: "https://raw.githubusercontent.com/yachenamk-hash/images/refs/heads/main/Firefly_GeminiFlash_la%20patte%20de%20fond%20de%20tarte%20au%20citron%20parfum%20de%20la%20patte%20sans%20fourrage%20558707.png",
@@ -661,7 +654,7 @@
                     size: "Ø 8cm - 10cm",
                     desc: "Notre recette originelle, pur beurre, élaborée pour offrir un croustillant exceptionnel qui sublime vos ganaches et crèmes pâtissières.",
                     note: "Disponible en version Sucrée pour vos desserts fruités ou Salée pour vos quiches et amuse-bouches raffinés.",
-                    ingredients:["Beurre extra-fin", "Farine de blé T45", "Sucre glace (version sucrée)", "Poudre d'amandes", "Œufs frais", "Sel de mer"],
+                    ingredients: ["Beurre extra-fin", "Farine de blé T45", "Sucre glace (version sucrée)", "Poudre d'amandes", "Œufs frais", "Sel de mer"],
                     options: ["Classique Sucrée", "Classique Salée"]
                 },
                 ar: {
@@ -670,7 +663,7 @@
                     size: "قطر 8 سم - 10 سم",
                     desc: "وصفاتنا الأصلية، بالزبدة الطبيعية، مُعدة لتقديم قرمشة استثنائية تبرز نكهة الكريمة والحشوات.",
                     note: "متوفرة بنسخة حلوة للحلويات أو مالحة للمقبلات الراقية.",
-                    ingredients:["زبدة رفيعة", "فرينة صنف T45", "سكر ناعم (للحلوة)", "بودرة اللوز", "بيض طازج", "ملح بحر"],
+                    ingredients: ["زبدة رفيعة", "فرينة صنف T45", "سكر ناعم (للحلوة)", "بودرة اللوز", "بيض طازج", "ملح بحر"],
                     options: ["كلاسيكية حلوة", "كلاسيكية مالحة"]
                 }
             },
@@ -684,7 +677,7 @@
                     size: "Ø 8cm",
                     desc: "Une création audacieuse infusée au piment doux et piment d'Espelette. Une attaque subtile en bouche qui réveille les papilles sans les brûler.",
                     note: "Idéal pour des tartes au chocolat noir intense ou des garnitures crémeuses à base d'avocat et crevettes.",
-                    ingredients:["Piment d'Espelette", "Piment doux séché", "Beurre de baratte", "Farine de force", "Fleur de sel"]
+                    ingredients: ["Piment d'Espelette", "Piment doux séché", "Beurre de baratte", "Farine de force", "Fleur de sel"]
                 },
                 ar: {
                     name: " الفلفل الحار",
@@ -692,7 +685,7 @@
                     size: "قطر 8 سم",
                     desc: "ابتكار جريء غني بالفلفل الحار . لدغة خفيفة توقظ الحواس دون حرقة قوية.",
                     note: "مثالي لترت الشوكولاتة الداكنة أو حشوات الأفوكادو والجمبري.",
-                    ingredients:["الفلفل الحار", "زبدة طبيعية", "فرينة ", " ملح"]
+                    ingredients: ["الفلفل الحار", "زبدة طبيعية", "فرينة ", " ملح"]
                 }
             },
             {
@@ -705,7 +698,7 @@
                     size: "Ø 8cm",
                     desc: "Une pâte infusée aux zestes de citrons frais. Une note acidulée et parfumée qui apporte une fraîcheur immédiate dès la première bouchée.",
                     note: "Sublime les tartes au citron meringuées ou les garnitures à base de fromage frais et basilic.",
-                    ingredients:["Zestes de citron bio", "Beurre ", "Sucre ", "Extrait naturel de citron", "Farine "]
+                    ingredients: ["Zestes de citron bio", "Beurre ", "Sucre ", "Extrait naturel de citron", "Farine "]
                 },
                 ar: {
                     name: "نكهة الليمون ",
@@ -713,7 +706,7 @@
                     size: "قطر 8 سم",
                     desc: "عجينة غنية ببشر الليمون الطازج. نكهة حمضية وعطرية تضفي انتعاشاً فورياً منذ أول قضمة.",
                     note: "تتناسب تماماً مع ترت الليمون بالميرنغ أو حشوات الجبن الطازج والريحان.",
-                    ingredients:[, "زبدة طبيعية", "سكر ", "مستخلص الليمون", "فرينة "]
+                    ingredients: [null, "زبدة طبيعية", "سكر ", "مستخلص الليمون", "فرينة "]
                 }
             },
             {
@@ -726,7 +719,7 @@
                     size: "Ø 8cm",
                     desc: "Pour les amateurs de saveurs corsées. Une pâte sombre et élégante intégrant un cacao 100% pur pour une profondeur de goût inégalée.",
                     note: "Le compagnon parfait des ganaches au chocolat noir, caramel au beurre salé ou praliné noisette.",
-                    ingredients:["Cacao pur 100%", "Sucre ", "Beurre ", "Fleur de sel"]
+                    ingredients: ["Cacao pur 100%", "Sucre ", "Beurre ", "Fleur de sel"]
                 },
                 ar: {
                     name: "شوكولاتة داكنة",
@@ -734,7 +727,7 @@
                     size: "قطر 8 سم",
                     desc: "لعشاق النكهات القوية. عجينة داكنة وأنيقة تدمج الكاكاو الصافي 100% لعمق مذاق لا يضاهى.",
                     note: "الشريك المثالي لجاناش الشوكولاتة الداكنة أو كراميل الزبدة المملحة.",
-                    ingredients:["كاكاو خام 100%", "سكر ", "زبدة ", " ملح"]
+                    ingredients: ["كاكاو خام 100%", "سكر ", "زبدة ", " ملح"]
                 }
             },
             {
@@ -747,7 +740,7 @@
                     size: "Ø 8cm - 10cm",
                     desc: "Une innovation Myzina : une base salée ou sucrée-salée aux nuances dorées, apportant une complexité aromatique et visuelle unique.",
                     note: "Parfait pour des tartes au chocolat-piment ou des créations audacieuses au miel et épices.",
-                    ingredients:["Curcuma ", "Beurre", "Farine", "Épices"]
+                    ingredients: ["Curcuma ", "Beurre", "Farine", "Épices"]
                 },
                 ar: {
                     name: "الكركم ",
@@ -755,7 +748,7 @@
                     size: "قطر 8 سم - 10 سم",
                     desc: "ابتكار ميزينا: قاعدة مالحة أو حلوة-مالحة بلمسات ذهبية، تضفي تعقيداً عطرياً وبصرياً فريداً.",
                     note: "مثالية لترت الشوكولاتة بالفلفل أو إبداعات جريئة بالعسل والتوابل.",
-                    ingredients:["كركم أصلي", "زبدة ", "فرينة ", "توابل "]
+                    ingredients: ["كركم أصلي", "زبدة ", "فرينة ", "توابل "]
                 }
             }
         ];
@@ -772,7 +765,6 @@
             setupAnimations();
             setupMobileMenu();
             updateContactSelect();
-            
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -844,6 +836,11 @@
                 body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
                 body.classList.toggle('rtl', currentLang === 'ar');
                 body.classList.toggle('font-arabic', currentLang === 'ar');
+
+                const phoneInput = document.querySelector('input[name="phone"]');
+                if (phoneInput) {
+                    phoneInput.placeholder = currentLang === 'fr' ? '+213 ...' : '+213 ...';
+                }
                 
                 setupCatalogue(); 
                 renderVariant(currentVariantIndex);
@@ -904,13 +901,13 @@
             const content = document.getElementById('variation-content');
 
             tabs.forEach(t => t.classList.remove('active'));
-            if(tabs[idx]) {
+            if (tabs[idx]) {
                 tabs[idx].classList.add('active');
                 tabs[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             }
 
             imgs.forEach(i => i.classList.remove('active'));
-            if(imgs[idx]) imgs[idx].classList.add('active');
+            if (imgs[idx]) imgs[idx].classList.add('active');
 
             gsap.fromTo(content, 
                 { opacity: 0, y: 30, filter: 'blur(10px)' }, 
@@ -950,7 +947,7 @@
 
         function updateContactSelect() {
             const select = document.getElementById('contact-select');
-            if(!select) return;
+            if (!select) return;
             
             select.innerHTML = '';
             const defaultOpt = document.createElement('option');
@@ -980,7 +977,7 @@
         function setupContactForm() {
             const form = document.getElementById('order-form');
             const btn = document.getElementById('form-submit-btn');
-            if(!form) return;
+            if (!form) return;
 
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
@@ -1037,7 +1034,6 @@
                     ease: 'power2.out'
                 });
             });
-            
 
             document.querySelectorAll('section').forEach(section => {
                 if (section.id === 'catalogue') return; 
@@ -1056,6 +1052,5 @@
 
         window.addEventListener('DOMContentLoaded', init);
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"9166d45131dc47f3a1583bb5909a68ea","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
