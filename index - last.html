@@ -672,7 +672,7 @@
                 image: "https://raw.githubusercontent.com/yachenamk-hash/images/refs/heads/main/Firefly_Gemini%20Flash_remouve%20logo%20in%20this%20picture%20344274.png",
                 hasOptions: false,
                 fr: {
-                    name: "Éclat de Piment",
+                    name: "Piment",
                     price: "850 DZD / 12 pcs",
                     size: "Ø 8cm",
                     desc: "Une création audacieuse infusée au piment doux et piment d'Espelette. Une attaque subtile en bouche qui réveille les papilles sans les brûler.",
@@ -680,7 +680,7 @@
                     ingredients: ["Piment d'Espelette", "Piment doux séché", "Beurre de baratte", "Farine de force", "Fleur de sel"]
                 },
                 ar: {
-                    name: " الفلفل الحار",
+                    name: "الفلفل الحار",
                     price: "850 دج / 12 قطعة",
                     size: "قطر 8 سم",
                     desc: "ابتكار جريء غني بالفلفل الحار . لدغة خفيفة توقظ الحواس دون حرقة قوية.",
@@ -878,7 +878,7 @@
                 const tab = document.createElement('div');
                 tab.className = `nav-tab ${idx === currentVariantIndex ? 'active' : ''}`;
                 
-                const shortName = v[currentLang].name.split(' ')[0] || v.id;
+                const shortName = v[currentLang].name.trim().split(' ')[0] || v.id;
                 tab.textContent = shortName.toUpperCase();
                 
                 tab.addEventListener('click', () => {
